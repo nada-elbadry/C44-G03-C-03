@@ -2,6 +2,9 @@
 #region Evolution of switch in c#
 #region C# 7.0 [Pattern matching - Case Guards(when)]
 using Demo_Session4;
+using System.Net.WebSockets;
+using System.Text;
+using System.Xml.Linq;
 //object number = 5.6;//Boxing
 #region Examble 01 [Pattern matching one types]
 /*
@@ -312,15 +315,113 @@ if (isParsed)
 #region String
 //string name = "Nada";//unreachable object
 //name = "Nada Elbadry";
-#region Examble 01
-string name;
+
+
+#region Examble 01  
+//string name;
 //Declare for reference from type string 'name'
 //reference 'name' is refering to default value of reference type[Null]
 // CLR will allocate 4 bytes at stack from reference 'name'
 //0 Bytes allocated at heap
-name = new string("Route");
+//name = new string("Route");
 //Allocate Required bytes at heap [10 bytes]
 //initalize allocated bytes
-char x;
+//call user defined constructor
+//assign reference 'name' with adress allocated object
+//Console.WriteLine($"Name:{name}");//Route
+//Console.WriteLine($"HashCode Name:{name.GetHashCode()}");//505658453
+
+//string name02 = "Route";//string literal = sentaqs sugar
+//CLR Will Checks If The String 'Route' is Already Exists
+//If is not exists -> Add New String  in pool
+//if It is Exists -> Reuse Same Memory Location
+//Console.WriteLine($"Name:{name02}");//Route
+//Console.WriteLine($"HashCode Name:{name02.GetHashCode()}");//505658453
+
+//char x=default;//\0
+//Console.WriteLine((int)x);//space   //0
+#endregion
+
+#region Examble 02
+string name01 = "Amr";
+string name02 = "May";
+Console.WriteLine($"Name 01:{name01}");
+Console.WriteLine($"HashCode Name:{name01.GetHashCode()}");
+Console.WriteLine($"Name 01:{name02}");
+Console.WriteLine($"HashCode Name:{name02.GetHashCode()}");
+name02 = name01;
+Console.WriteLine("After Assign name02=name01");
+Console.WriteLine($"Name 01:{name01}");
+Console.WriteLine($"HashCode Name:{name01.GetHashCode()}");
+Console.WriteLine($"Name 01:{name02}");
+Console.WriteLine($"HashCode Name:{name02.GetHashCode()}");
+name01 = "omar";
+Console.WriteLine($"Name 01:{name01}");
+Console.WriteLine($"HashCode Name:{name01.GetHashCode()}");
+Console.WriteLine($"Name 01:{name02}");
+Console.WriteLine($"HashCode Name:{name02.GetHashCode()}");
+Console.WriteLine("After Changing name0 Value");
+Console.WriteLine($"Name 01:{name01}");
+Console.WriteLine($"HashCode Name:{name01.GetHashCode()}");
+Console.WriteLine($"Name 01:{name02}");
+Console.WriteLine($"HashCode Name:{name02.GetHashCode()}");
+
+#endregion
+
+#region Examble03
+/*
+string message = "Hello";
+Console.WriteLine(message);
+Console.WriteLine(message.GetHashCode());
+message += "Route";
+Console.WriteLine("After Changing in message");
+Console.WriteLine(message);
+Console.WriteLine(message.GetHashCode());
+*/
+#endregion
+#region string Methods
+//string message = "  Hello Route  ";
+//Console.WriteLine(message.Length);
+//Console.WriteLine(message.ToUpper());
+//Console.WriteLine(message.ToLower());
+//Console.WriteLine(message.Trim());
+//Console.WriteLine(message.TrimStart());
+//Console.WriteLine(message.TrimEnd());
+//Console.WriteLine(message.Substring(0,5));
+//Console.WriteLine(message.Replace('e', 'm'));
+//Console.WriteLine(message.Contains('o')) ;
+#endregion
+#region Stringbuilder
+//it is  a mutanle string
+//Internaly is represented as a linked list of characters
+//StringBuilder message;
+//Declare Reference From Type stringbuilder 'message'
+//reference 'Message' Is Referring To Null
+//CLR Will Allocate 4 bytes At stack For Reference 'message'
+// 0 bytes allocated at heap
+//message = new StringBuilder("Hello");
+
+//Console.WriteLine($"message = {message}");
+//Console.WriteLine($"Hashcode of message = {message.GetHashCode()}");
+//message.Clear();
+//message.Append("Route");
+//Console.WriteLine("After Changing");
+//Console.WriteLine($"message = {message}");
+//Console.WriteLine($"Hashcode of message = {message.GetHashCode()}");
+
+#endregion
+#region Stringbuilder Methods
+//StringBuilder message = new StringBuilder("Hello");
+//message.Append("Route");
+//message.AppendLine("Welcome");
+//message.Append("New Student");
+//message.Replace("New Student", "Amr");
+//message.Remove(0, 5);
+//message.Insert(0, "Hi");
+//message.AppendLine("Amr");
+//int age = 25;
+//message.AppendFormat("Your Age is {0}", age);
+//message.AppendJoin('_', "Mohamed", "Nada", "Nora");
+//Console.WriteLine(message);
 #endregion
 #endregion
