@@ -27,6 +27,55 @@
             //Console.WriteLine(X);
             #endregion
 
+            #region Examble01
+            #region Nullable Value Types
+            ////int x = 10;
+            ////x = null;//invalid
+
+            //Nullable<int> Y = 10;
+            //Y=null;
+            ////Y can hold Int value+ null
+
+            //int? Z = 100;
+            //Z = null; 
+            #endregion
+
+            #region Examble02
+            //int x = 10;
+            // int? y = x;//Valid -Implicitly Casting
+
+            /// x can hold int values
+            /// y ccan hold int values + null
+
+            // int? A = 10;
+            // int B =(int) A;//Valid - Explicitly Casting - Unsafe
+
+            // Console.WriteLine(B);
+
+            //int? A = 10;
+            //int B;
+            //if (A is not null)
+            //    B = (int)A;
+            //==============
+            //else
+            //    B = 0;
+            //if(A.HasValue)
+            //    B=A.Value;
+           // else
+              //  B = 0;
+
+             //===============
+            // B=A.HasValue?A.Value:0;
+            //========================
+           // B = A ?? 0;
+            //========================
+            B = A.GetValueOrDefault();
+
+            //Console.WriteLine($"A={A}");
+            //Console.WriteLine($"{B}");
+
+            #endregion
+
             #endregion
         }
     }
