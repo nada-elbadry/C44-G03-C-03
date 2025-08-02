@@ -1,4 +1,6 @@
-﻿namespace OOP1
+﻿using System.ComponentModel.Design;
+
+namespace OOP1
 {
     internal class Program
     {
@@ -89,6 +91,39 @@
 #nullable enable
 
             #endregion
-        }
+
+            #region Null-Conditional | Propagation Operator
+
+
+            int[] numbers = null;
+
+            int arrayLength = numbers?.Length??0;//null collesing operators
+
+            int? arrayLength02= numbers.Length;
+
+            if (numbers is not null)
+            {
+                for (int i = 0; i < numbers.Length; i++)
+                {
+                    Console.WriteLine(numbers[i]);
+                }
+            }
+            else
+           { 
+                //Need Addional Actions ToBe Executed
+           }
+
+                for (int i = 0; i < numbers?.Length; i++)//short_circuit
+                {
+                    Console.WriteLine(numbers[i]);
+                }
+                //numbers?.Length
+                //numbers is null => null
+                //numbers Value => numbers.Length
+                #endregion
+
+
+
+            }
     }
 }
