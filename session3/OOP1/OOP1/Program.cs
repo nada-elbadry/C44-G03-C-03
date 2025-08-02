@@ -26,9 +26,10 @@
             //int X =(int)obj;//Unboxing - Unsafe - Explicity
             //Console.WriteLine(X);
             #endregion
+            #endregion
 
-            #region Examble01
             #region Nullable Value Types
+            #region Examble01
             ////int x = 10;
             ////x = null;//invalid
 
@@ -45,7 +46,7 @@
             // int? y = x;//Valid -Implicitly Casting
 
             /// x can hold int values
-            /// y ccan hold int values + null
+            /// y can hold int values + null
 
             // int? A = 10;
             // int B =(int) A;//Valid - Explicitly Casting - Unsafe
@@ -61,20 +62,31 @@
             //    B = 0;
             //if(A.HasValue)
             //    B=A.Value;
-           // else
-              //  B = 0;
+            // else
+            //  B = 0;
 
-             //===============
+            //===============
             // B=A.HasValue?A.Value:0;
             //========================
-           // B = A ?? 0;
+            // B = A ?? 0;
             //========================
-            B = A.GetValueOrDefault();
+            // B = A.GetValueOrDefault();
 
             //Console.WriteLine($"A={A}");
             //Console.WriteLine($"{B}");
 
             #endregion
+
+            #endregion
+
+            #region Nullable Reference Type
+            //string name001 = null!;//null forgiving operator
+            //Console.WriteLine(name001);
+
+            //string? name02 = null;//Compiler inhancment
+            //Console.WriteLine(name02);
+#nullable disable
+#nullable enable
 
             #endregion
         }
