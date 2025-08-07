@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Net.NetworkInformation;
 
 namespace Demo
 {
@@ -95,7 +96,7 @@ namespace Demo
             //int M = (int)K; // Explicit Casting [May Cause Loss Of Data]
             //Console.WriteLine(M); // 10
 
-            
+
             #endregion
 
             #endregion
@@ -483,6 +484,112 @@ namespace Demo
 
             #endregion
             #endregion
+
+            sing hello1;
+class Program
+        {
+            static void Main(string[] args)
+            {
+                #region error types
+                //Console.WriteLine("Hello, World!");
+                //int x;
+                //Console.WriteLine(x);
+
+                //int x = 5;
+                //int y = 0;
+                //Console.WriteLine(x/y);
+                //int x = Sum(5, 10);
+                //Console.WriteLine(x);
+                #endregion
+                //Declare variable x
+                //int x;
+                /*
+                 sdcv
+                sdv
+                sdc
+                 */
+
+                #region  Declare Variable
+                //int static;
+                //int x=5;
+                //Console.WriteLine(x);
+                //x = 7;
+                //x = "Ahmed";//inva;id
+                // string Name = "test";
+                #endregion
+                /*
+                 common type system (CTS)
+                 common language specification (CLS)
+                */
+                #region Datatype
+                #region  Value Type
+                int x;
+                //CLR allocate 4 unintialized bytes in stack
+                x = 4;
+                //4 bYTES = 4
+                Int32 y = 9;
+                //CLR allocate 4 intialized Bytes in stack = 9
+                y = x;
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+                x++;
+                Console.WriteLine(x);
+                Console.WriteLine(y);
+                #endregion
+                #region  Ref Type
+                hello1.Point P01;
+                //Declare For Reference  of  Type Point "P1" Reference to Null
+                //4 Bytes Allocated in Stack for Pointer| Reference
+                //0 Bytes Allocated in Heap
+                P01 = new hello1.Point();
+                //1.Allocated Required Bytes at Heap
+                // 2. Initialize Allocated Bytes Of Object With Default Value
+                // 3. Call User Defined Constructor (If Exist)
+                // 4. Assign Reference (P1) To Allocated Object
+                hello1.Point P02 = new hello1.Point();//unrichable object
+                P02 = P01;
+
+                #endregion
+                #endregion
+                #region Object
+                //x = 5;
+                //Console.WriteLine(x.ToString());
+                Console.WriteLine(P01.ToString());
+                Console.WriteLine(P01.GetHashCode());
+                Console.WriteLine(P01.GetType());
+                object obj;
+                obj = 1;
+                obj = 1.2;
+                obj = "Ahmed";
+                obj = true;
+                Console.WriteLine(obj);
+                #endregion
+            }
+            #region function 
+            //ctrl+k ctrl+s
+            /// <summary>
+            /// sum two number
+            /// </summary>
+            /// <param name="x">firest number</param>
+            /// <param name="y"> second number</param>
+            /// <returns> sum of <paramref name="x"/>and<paramref name="y"/></returns>
+            //static int Sum(int x, int y)
+            //{
+            //    return x - y;
+            //}
+            #endregion
+            ///BCL       C# Keyword
+            ///Byte        byte
+            ///Int16       Short
+            ///Int32       int
+            ///Int64       Long
+            ///Single      float
+            ///Double      double
+            ///Decimal     decimal
+            ///String      string
+            ///Char        char
+            ///
         }
+    }
     }
 }
