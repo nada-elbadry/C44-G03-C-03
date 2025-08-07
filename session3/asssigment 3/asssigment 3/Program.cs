@@ -75,7 +75,7 @@ namespace Session03
             #endregion
 
             #region 8. Simple Interest Calculation
-
+            /*
             Console.Write("Enter Principal: ");
             double principal = Convert.ToDouble(Console.ReadLine()?? "Error Principal");
             Console.Write("Enter Rate: ");
@@ -84,25 +84,31 @@ namespace Session03
             double time = Convert.ToDouble(Console.ReadLine()??"null time");
             double interest = (principal * rate * time) / 100;
             Console.WriteLine($"Simple Interest: {interest}");
+            */
             #endregion
 
             #region 9. BMI Calculation
+            /*
             Console.Write("Enter Weight (kg): ");
             double weight = Convert.ToDouble(Console.ReadLine() ?? "null Weight");
             Console.Write("Enter Height (m): ");
             double height = Convert.ToDouble(Console.ReadLine()?? "null Height");
             double bmi = weight / (height * height);
             Console.WriteLine($"BMI: {bmi}");
+            */
             #endregion
 
             #region 10. Ternary Temperature Check
+            /*
             Console.Write("Enter temperature: ");
             int? temp = Convert.ToInt32(Console.ReadLine());
             string? result = temp < 10 ? "Just Cold" : temp > 30 ? "Just Hot" : "Just Good";
             Console.WriteLine(result);
+            */
             #endregion
 
             #region 11. Date Format Display
+            /*
             Console.Write("Enter day: ");
             int? day = Convert.ToInt32(Console.ReadLine());
             Console.Write("Enter month: ");
@@ -112,21 +118,27 @@ namespace Session03
             Console.WriteLine($"Today's date: {day} , {month} , {year}");
             Console.WriteLine($"Today's date: {day} / {month} / {year}");
             Console.WriteLine($"Today's date: {day} – {month} – {year}");
+            */
             #endregion
 
             #region 12. Divisible by 3 and 4
+            /*
             Console.Write("Enter a number: ");
             int? num = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(num % 3 == 0 && num % 4 == 0 ? "Yes" : "No");
+            */
             #endregion
 
             #region 13. Positive or Negative
+            /*
             Console.Write("Enter a number: ");
             int? signCheck = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(signCheck < 0 ? "negative" : "positive");
+            */
             #endregion
 
             #region 14. Max and Min of 3 Integers
+            /*
             Console.Write("Enter 3 numbers separated by space: ");
             string? inputValues = Console.ReadLine();
             if (!string.IsNullOrWhiteSpace(inputValues))
@@ -150,27 +162,35 @@ namespace Session03
             {
                 Console.WriteLine("Invalid input.");
             }
-            #endregion
+            */
+            #endregion 
 
             #region 15. Even or Odd
+            /*
             Console.Write("Enter a number: ");
             int checkEven = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine(checkEven % 2 == 0 ? "Even" : "Odd");
+            */
             #endregion
 
             #region 16. Vowel or Consonant
+            /*
             Console.Write("Enter a character: ");
             char ch = Char.ToLower(Console.ReadKey().KeyChar);
             Console.WriteLine();
             Console.WriteLine("aeiou".Contains(ch) ? "Vowel" : "Consonant");
+            */
             #endregion
 
             #region 17. Days in Month
+            /*
             Console.Write("Enter month number: ");
             int m = Convert.ToInt32(Console.ReadLine());
             int days = DateTime.DaysInMonth(2024, m); // Leap year handling
             Console.WriteLine($"Days in Month: {days}");
+            */
             #endregion
-        }
+            //first commit
+        }//second commit
     }
 }
