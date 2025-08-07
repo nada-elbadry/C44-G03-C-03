@@ -2,8 +2,10 @@
 
 namespace OOP1
 {
+    
     internal class Program
     {
+     
         static void Main(string[] args)
         {
             #region Boxing-Unboxing
@@ -95,28 +97,28 @@ namespace OOP1
             #region Null-Conditional | Propagation Operator
 
 
-            int[] numbers = null;
+            //int[] numbers = null;
 
-            int arrayLength = numbers?.Length??0;//null collesing operators
+            //int arrayLength = numbers?.Length??0;//null collesing operators
 
-            int? arrayLength02= numbers.Length;
+            //int? arrayLength02= numbers.Length;
 
-            if (numbers is not null)
-            {
-                for (int i = 0; i < numbers.Length; i++)
-                {
-                    Console.WriteLine(numbers[i]);
-                }
-            }
-            else
-           { 
-                //Need Addional Actions ToBe Executed
-           }
+            //if (numbers is not null)
+            //{
+            //    for (int i = 0; i < numbers.Length; i++)
+            //    {
+            //        Console.WriteLine(numbers[i]);
+            //    }
+            //}
+           // else
+           //{ 
+           //     //Need Addional Actions ToBe Executed
+           //}
 
-                for (int i = 0; i < numbers?.Length; i++)//short_circuit
-                {
-                    Console.WriteLine(numbers[i]);
-                }
+                //for (int i = 0; i < numbers?.Length; i++)//short_circuit
+                //{
+                //    Console.WriteLine(numbers[i]);
+                //}
                 //numbers?.Length
                 //numbers is null => null
                 //numbers Value => numbers.Length
